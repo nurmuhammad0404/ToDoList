@@ -86,12 +86,11 @@ public class TaskService {
         return toDTO(entity);
     }
 
-        @Scheduled(cron = "0 0 0,1 * * *")
-//    @Scheduled(fixedRate = 1000)
+    @Scheduled(cron = "0 0/0 0 * * *")
     public void deldeteColumn() {
         List<TaskEntity> entityList = taskRepository.findAll();
-        for (TaskEntity entity : entityList){
-            if (LocalDateTime.now().getDayOfYear() - entity.getCreatedDate().getDayOfYear() == 1){
+        for (TaskEntity entity : entityList) {
+            if (LocalDateTime.now().getDayOfYear() - entity.getCreatedDate().getDayOfYear() == 1) {
                 taskRepository.deleteById(entity.getId());
             }
         }
