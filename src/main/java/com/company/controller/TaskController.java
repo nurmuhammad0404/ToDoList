@@ -1,10 +1,13 @@
 package com.company.controller;
 
 import com.company.dto.TaskDTO;
+import com.company.entity.TaskEntity;
 import com.company.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/task")
@@ -37,5 +40,10 @@ public class TaskController {
     public ResponseEntity<?> finishTask(@PathVariable("id") String id){
         return ResponseEntity.ok(taskService.finishTask(id));
     }
+
+//    @GetMapping("/find/{n}")
+//    public ResponseEntity<?> find(@PathVariable("n") int n){
+//        return ResponseEntity.ok(taskService.find(n));
+//    }
 
 }

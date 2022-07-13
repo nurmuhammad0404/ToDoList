@@ -2,7 +2,7 @@ POST http://localhost:8085/task
 Content-Type: application/json
 
 {
-  "content": "Bozorga borish"
+  "content": "Sayr qilish"
 }
 
 ###
@@ -12,17 +12,21 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:8085/task/update/4028818b81cb7b460181cb7b5e310000
+PUT http://localhost:8085/task/update/8a8a855c81f7bdbb0181f7c0904d0004
 Content-Type: application/json
 
 {
-  "content": "Darsga borish"
+  "content": "Futbol o'ynash"
 }
 
 ###
 
-DELETE http://localhost:8085/task/delete/4028818b81cb76230181cb7630070000
+DELETE http://localhost:8085/task/delete/8a8a855c81f7bdbb0181f7c0904d0004
 
 ###
 
-PUT http://localhost:8085/task/finishTask/4028818b81cb7b460181cb7b5e310000
+PUT http://localhost:8085/task/finishTask/8a8a855c81f7bdbb0181f7c0904d0004
+
+###
+
+GET http://localhost:8085/task/find/4
